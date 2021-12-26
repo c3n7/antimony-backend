@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'django_seed',
 
     # local
+    'seeder',
+
     'msgs',
 ]
 
