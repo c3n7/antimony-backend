@@ -1,0 +1,9 @@
+dj-rest-auth
+django-allauth
+django-cors-headers
+djangorestframework
+django-seed
+drf-yasg
+drf-url-filters
+python-dotenv
+psycopg2
