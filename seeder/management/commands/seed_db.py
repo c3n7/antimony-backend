@@ -1,10 +1,15 @@
 from django.core.management.base import BaseCommand
 from users.seeder import seed as seed_users
+from msgs.seeder import MsgSeeder
 
 
 class Command(BaseCommand):
     help = 'seed database'
 
     def handle(self, *args, **options):
-        inserted = seed_users(200)
+        inserted = seed_users(50)
+        print(inserted)
+
+        sd = MsgSeeder()
+        inserted = sd.seed(2000)
         print(inserted)
