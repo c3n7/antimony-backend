@@ -4,7 +4,7 @@ from .views import MsgViewSet
 
 router = SimpleRouter()
 router.register(
-    'msgs', MsgViewSet,
+    '', MsgViewSet,
     basename='msgs'
 )
 
