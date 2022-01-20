@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'seeder',
 
     'msgs',
+    'contacts',
 ]
 
 MIDDLEWARE = [
