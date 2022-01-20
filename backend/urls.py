@@ -42,6 +42,7 @@ urlpatterns = [
 
     # apps
     path('api/v1/msgs/', include('msgs.urls')),
+    path('api/v1/contacts/', include('contacts.urls')),
 
     # docs
     path('swagger/', schema_view.with_ui(
