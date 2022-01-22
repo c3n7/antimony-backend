@@ -161,6 +161,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Cors stuff
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+# Allows /auth/logout to work
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 
 # rest_framework permission configs
