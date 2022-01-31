@@ -178,6 +178,7 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000',
                         'https://antimony-chat.netlify.app',
                         'https://antimony-backend.herokuapp.com',
+                        'https://antimony-chat.herokuapp.com/',
                         ]
 
 # For setting session and csrf cookies
