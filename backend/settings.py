@@ -34,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost',
                  '127.0.0.1', 'antimony-backend.herokuapp.com',
                  'antimony-chat.netlify.app',
-                 'https://antimony-chat.herokuapp.com/',
+                 'antimony-chat.herokuapp.com/',
                  ]
 
 
@@ -177,10 +177,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 # Allows /auth/logout to work
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000',
+CSRF_TRUSTED_ORIGINS = ['https://antimony-chat.herokuapp.com',
                         'https://antimony-chat.netlify.app',
+                        'http://localhost:3000',
                         'https://antimony-backend.herokuapp.com',
-                        'https://antimony-chat.herokuapp.com/',
                         ]
 
 # For setting session and csrf cookies
