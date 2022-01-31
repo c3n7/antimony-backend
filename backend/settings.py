@@ -33,7 +33,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost',
                  '127.0.0.1', 'antimony-backend.herokuapp.com',
-                 'antimony-chat.netlify.app', ]
+                 'antimony-chat.netlify.app',
+                 'https://antimony-chat.herokuapp.com/',
+                 ]
 
 
 # Application definition
