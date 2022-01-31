@@ -180,10 +180,13 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:3000',
                         'https://antimony-backend.herokuapp.com',
                         ]
 
+# For setting session and csrf cookies
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
+
+CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
 
 # rest_framework permission configs
 REST_FRAMEWORK = {
