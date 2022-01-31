@@ -189,7 +189,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 
-CSRF_COOKIE_DOMAIN = "https://antimony-chat.herokuapp.com/"
+# CSRF_COOKIE_DOMAIN = "https://antimony-chat.herokuapp.com/"
 
 # rest_framework permission configs
 REST_FRAMEWORK = {
