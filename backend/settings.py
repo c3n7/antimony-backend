@@ -179,6 +179,8 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:3000',
 
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
 
 # rest_framework permission configs
 REST_FRAMEWORK = {
@@ -207,3 +209,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 SITE_ID = 1
+
+
+# Deployment guide
+# https://medium.com/@hdsingh13/deploying-django-app-on-heroku-with-postgres-as-backend-b2f3194e8a43
