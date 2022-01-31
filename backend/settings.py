@@ -186,7 +186,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 
-CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
+CSRF_COOKIE_HTTPONLY = False
 
 # rest_framework permission configs
 REST_FRAMEWORK = {
