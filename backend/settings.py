@@ -69,6 +69,7 @@ INSTALLED_APPS = [
 
     'msgs',
     'contacts',
+    'users',
 ]
 
 MIDDLEWARE = [

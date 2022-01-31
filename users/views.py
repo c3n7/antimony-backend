@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from django.middleware.csrf import get_token
 
-# Create your views here.
+
+@api_view()
+def get_csrf_token(request):
+
+    return Response({'csrfToken', get_token(request)})
