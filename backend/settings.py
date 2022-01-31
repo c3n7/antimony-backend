@@ -175,7 +175,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 # Allows /auth/logout to work
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000',
-                        'https://antimony-chat.netlify.app']
+                        'https://antimony-chat.netlify.app',
+                        'https://antimony-backend.herokuapp.com',
+                        ]
 
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
