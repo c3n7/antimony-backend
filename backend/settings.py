@@ -32,7 +32,8 @@ SECRET_KEY = 'django-insecure-n32=@zd^_+h)g2wp4+u&vxeoqsrbovh(ztwrm218s+(u%x)+ta
 DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost',
-                 '127.0.0.1', 'antimony-backend.herokuapp.com']
+                 '127.0.0.1', 'antimony-backend.herokuapp.com',
+                 'antimony-chat.netlify.app', ]
 
 
 # Application definition
