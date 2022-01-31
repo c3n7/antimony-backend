@@ -186,7 +186,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 
-CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_DOMAIN = "antimony-chat.netlify.app"
 
 # rest_framework permission configs
 REST_FRAMEWORK = {
