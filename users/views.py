@@ -5,5 +5,6 @@ from django.middleware.csrf import get_token
 
 @api_view()
 def get_csrf_token(request):
-
-    return Response({'csrfToken': get_token(request)})
+    token = get_token(request)
+    response = Response({'csrfToken': token})
+    response["X-CSRFToken"] = token
