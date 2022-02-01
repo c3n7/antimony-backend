@@ -12,4 +12,4 @@ class Msg(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "{} to {}".format(self.user_from, self.user_to)
+        return "{} to {}".format(self.user_from.id, self.user_to.id)
