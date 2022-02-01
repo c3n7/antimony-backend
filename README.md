@@ -3,6 +3,16 @@
 - Part of the `antimony chat project`.
 - Built using `Python`, `Django` and `Django Rest Framework`.
 
+### Dev Tip
+
+To reset the tables whle developing, [do this](https://stackoverflow.com/a/3327326/7450617):
+
+```sql
+select 'drop table if exists "' || tablename || '" cascade;'
+  from pg_tables
+ where schemaname = 'public';
+```
+
 ### License
 
 ```ascii

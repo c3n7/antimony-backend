@@ -16,5 +16,5 @@ class Command(BaseCommand):
         print(inserted)
 
         sd = MsgSeeder()
-        inserted = sd.seed(2000)
+        inserted = sd.seed(10_000)
         print(inserted)
