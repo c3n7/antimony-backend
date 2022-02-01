@@ -4,6 +4,7 @@ from django.middleware.csrf import get_token
 from django.views.decorators.csrf import ensure_csrf_cookie
 
 
+# TODO: Remove this, urls.py and users from INSTALLED_APPS
 @ensure_csrf_cookie
 @api_view()
 def get_csrf_token(request):
