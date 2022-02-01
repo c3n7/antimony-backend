@@ -44,7 +44,7 @@ class MsgConversationListView(FiltersMixin, generics.ListAPIView):
 
         queryset = queryset.filter(user_from=conversation_with) | queryset.filter(
             user_to=conversation_with)
-        return queryset.order_by('-created_at')
+        return queryset.order_by('created_at')
 
     filter_backends = (filters.OrderingFilter,)
     filter_mappings = {
