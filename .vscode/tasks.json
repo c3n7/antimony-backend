@@ -6,7 +6,8 @@
         {
             "label": "deploy",
             "type": "shell",
-            "command": "git push heroku heroku-deployment:main"
+            // "command": "git push heroku heroku-deployment:main"
+            "command": "git push heroku main"
         }
     ]
 }
