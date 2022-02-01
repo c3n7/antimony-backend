@@ -10,3 +10,6 @@ class Msg(models.Model):
     user_to = models.ForeignKey(
         get_user_model(), on_delete=models.PROTECT, related_name="msg_target")
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "{} to {}".format(self.user_from, self.user_to)
