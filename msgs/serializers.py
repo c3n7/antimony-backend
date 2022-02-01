@@ -24,8 +24,3 @@ class MsgCountSerializer(serializers.Serializer):
             'user_to',
             'dcount',
         )
-
-
-class MsgLatestSerializer(serializers.Serializer):
-    latest_msg = serializers.DateTimeField()
-    user_to = serializers.IntegerField()

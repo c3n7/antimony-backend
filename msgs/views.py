@@ -6,7 +6,7 @@ from filters.mixins import (
 
 from .models import Msg
 from .permissions import IsSenderOrRecepient
-from .serializers import MsgSerializer, MsgCountSerializer, MsgLatestSerializer
+from .serializers import MsgSerializer, MsgCountSerializer
 
 
 class MsgViewSet(FiltersMixin, viewsets.ModelViewSet):
