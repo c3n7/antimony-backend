@@ -16,8 +16,6 @@ class MsgSerializer(serializers.ModelSerializer):
 
 class MsgCountSerializer(serializers.Serializer):
     dcount = serializers.IntegerField()
-    # user_to = serializers.ModelField(
-    #     model_field=Msg()._meta.get_field('user_to'))
     user_to = serializers.IntegerField()
 
     class Meta:
@@ -26,3 +24,8 @@ class MsgCountSerializer(serializers.Serializer):
             'user_to',
             'dcount',
         )
+
+
+class MsgLatestSerializer(serializers.Serializer):
+    latest_msg = serializers.DateTimeField()
+    user_to = serializers.IntegerField()

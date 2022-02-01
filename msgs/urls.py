@@ -1,7 +1,7 @@
 from rest_framework.routers import SimpleRouter
 from django.urls import path
 
-from .views import MsgViewSet, MsgCountListView
+from .views import MsgViewSet, MsgCountListView, MsgLatestListView
 
 router = SimpleRouter()
 router.register(
@@ -12,5 +12,7 @@ router.register(
 urlpatterns = [
     path('received-count/', MsgCountListView.as_view(),
          name="received-message-count"),
+    path('head/', MsgLatestListView.as_view(),
+         name="received-head"),
 ]
 urlpatterns += router.urls

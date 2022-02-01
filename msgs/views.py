@@ -1,4 +1,4 @@
-from django.db.models import Count
+from django.db.models import Count, Max
 from rest_framework import viewsets, permissions, filters, generics
 from filters.mixins import (
     FiltersMixin,
@@ -6,7 +6,7 @@ from filters.mixins import (
 
 from .models import Msg
 from .permissions import IsSenderOrRecepient
-from .serializers import MsgSerializer, MsgCountSerializer
+from .serializers import MsgSerializer, MsgCountSerializer, MsgLatestSerializer
 
 
 class MsgViewSet(FiltersMixin, viewsets.ModelViewSet):
@@ -37,3 +37,17 @@ class MsgCountListView(generics.ListAPIView):
         queryset = Msg.objects.filter(
             user_from=user) | Msg.objects.filter(user_to=user)
         return queryset.values('user_to').annotate(dcount=Count('user_to')).order_by('user_to')
+
+
+class MsgLatestListView(generics.ListAPIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = MsgSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        queryset = Msg.objects.filter(
+            user_from=user) | Msg.objects.filter(user_to=user)
+        # return queryset.values('user_to').annotate(Count('user_to'), latest_msg=Max('created_at')).order_by('user_to')
+        queryset = queryset.order_by(
+            'user_to', '-created_at').distinct('user_to')
+        return queryset
