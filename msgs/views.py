@@ -36,7 +36,7 @@ class MsgCountListView(generics.ListAPIView):
         user = self.request.user
         queryset = Msg.objects.filter(
             user_from=user) | Msg.objects.filter(user_to=user)
-        return queryset.values('user_to').annotate(dcount=Count('user_to')).order_by('user_to')
+        return queryset.values('user_from').annotate(dcount=Count('user_from')).order_by('user_from')
 
 
 class MsgLatestListView(generics.ListAPIView):
@@ -45,9 +45,9 @@ class MsgLatestListView(generics.ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        queryset = Msg.objects.filter(
-            user_from=user) | Msg.objects.filter(user_to=user)
+        # Get only messages sent to logged in user
+        queryset = Msg.objects.filter(user_to=user)
         # return queryset.values('user_to').annotate(Count('user_to'), latest_msg=Max('created_at')).order_by('user_to')
         queryset = queryset.order_by(
-            'user_to', '-created_at').distinct('user_to')
+            'user_from', '-created_at').distinct('user_from')
         return queryset
