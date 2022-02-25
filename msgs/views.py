@@ -1,3 +1,4 @@
+from ast import operator
 from django.db.models import Count
 from rest_framework import viewsets, permissions, filters, generics
 from filters.mixins import (
@@ -76,4 +77,7 @@ class MsgLatestListView(generics.ListAPIView):
         # return queryset.values('user_to').annotate(Count('user_to'), latest_msg=Max('created_at')).order_by('user_to')
         queryset = queryset.order_by(
             'user_from', '-created_at').distinct('user_from')
+
+        # https://stackoverflow.com/a/41702253/7450617
+        queryset = Msg.objects.filter(id__in=queryset).order_by('-created_at')
         return queryset
